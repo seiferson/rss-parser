@@ -14,5 +14,5 @@ RSS Parser in python
 <title-dec>			::= <title><content></title>
 <link-dec>			::= <link><content></link>
 <description-dec>	::= <description><content></description>
-<content>			::= any word,number or space/tab/EOL char
-<n>					::= numbers from 0 to 9
+<content>			::= (any \w,\d or \s/\t/\n char)*
+<n>					::= (numbers from 0 to 9)*
