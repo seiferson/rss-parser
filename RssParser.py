@@ -4,21 +4,22 @@
 #Universidad de Guadalajara
 #Compiladores
 
-from Lexic import Lexic
+from Lexical import Lexical
 from FileMan import FileMan
 
 class RssParser:
 	""""""
 	def __init__( self ):
-		self.lx = Lexic( )
+		self.lx = Lexical( )
 		self.fm = FileMan( )
-
 
 	def run( self ):
 		"""Main method for rss parser.
 		"""
-		fData = self.fm.loadTxtFile( "test.rss" )
+		fData = self.fm.loadTxtFile( "./rss/universal.rss" )
 		self.lx.tokenize( fData )
+		for i in self.lx.analyze( ):
+			print( i.getType( ) )
 
 app = RssParser( )
 app.run( )

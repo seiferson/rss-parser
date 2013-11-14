@@ -5,7 +5,8 @@
 #Compiladores
 
 class Token:
-	""""""
+	""" Class required for data storage of tokens.
+	"""
 	def __init__( self, str_, type_ ):
 		self.str_ = str_
 		self.type_ = type_
